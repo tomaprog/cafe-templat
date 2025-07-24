@@ -38,7 +38,20 @@
         <a href="#contact">Контакты</a>
     </div>
     </header>
-    
+    <script>
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  burger.addEventListener('click', () => {
+    if (mobileNav.classList.contains('show')) {
+      mobileNav.classList.remove('show');
+      setTimeout(() => mobileNav.style.display = 'none', 300); // ждём окончания анимации
+    } else {
+      mobileNav.style.display = 'flex';
+      setTimeout(() => mobileNav.classList.add('show'), 10); // даём браузеру время применить display
+    }
+  });
+</script>
     <div class="content">
         
         <div class="text">Добро пожаловать ☕</div>
@@ -65,8 +78,8 @@
     </div>
     </div>
     <div style="background-color: #fcefe3; padding: 30px 20px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #6B5E4B;">
-  <p style="font-weight: 700; font-size: 1.2rem; margin: 0 0 10px;">EVON — это не просто кофейня.</p>
-  <p style="font-weight: 400; font-size: 1rem; margin: 0;">Это место, где можно притормозить, расслабиться и просто быть собой.</p>
+    <p style="font-weight: 700; font-size: 1.2rem; margin: 0 0 10px;">EVON — это не просто кофейня.</p>
+   <p style="font-weight: 400; font-size: 1rem; margin: 0;">Это место, где можно притормозить, расслабиться и просто быть собой.</p>
     </div>
 
     <div class="content3">
@@ -107,11 +120,14 @@
       
       </div>
       <div class="contact-info">
-  📞 Номер для связи: <a href="tel:+79281115023">7 (928) 111 50-23</a>
-  <div class="welcome-text">Мы ждём вас!</div>
-</div>
+    📞 Номер для связи: <a href="tel:+79281115023">7 (928) 111 50-23</a>
+    <div class="welcome-text">Мы ждём вас!</div>
+  </div>
 
 
     </div>
+    
+
+
     
 
